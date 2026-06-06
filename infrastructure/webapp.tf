@@ -14,6 +14,9 @@ resource "azurerm_linux_web_app" "main" {
   resource_group_name = azurerm_resource_group.main.name
   service_plan_id     = azurerm_service_plan.main.id
 
+  webdeploy_publish_basic_authentication_enabled = false
+  ftp_publish_basic_authentication_enabled       = false
+
   site_config {
     always_on = false
 

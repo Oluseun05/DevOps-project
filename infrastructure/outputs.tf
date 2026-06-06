@@ -1,13 +1,3 @@
-output "jenkins_public_ip" {
-  description = "SSH and browser access to Jenkins VM"
-  value       = azurerm_public_ip.jenkins.ip_address
-}
-
-output "jenkins_url" {
-  description = "Open this in your browser to access Jenkins"
-  value       = "http://${azurerm_public_ip.jenkins.ip_address}:8080"
-}
-
 output "webapp_name" {
   description = "Paste this into the Jenkins WEBAPP_NAME_PARAM when running the pipeline"
   value       = azurerm_linux_web_app.main.name

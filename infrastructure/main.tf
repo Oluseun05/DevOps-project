@@ -19,7 +19,7 @@ terraform {
   # Update storage_account_name with the value from: cd bootstrap && terraform output storage_account_name
   backend "azurerm" {
     resource_group_name  = "myapp-tfstate-rg"
-    storage_account_name = "REPLACE_WITH_BOOTSTRAP_OUTPUT"
+    storage_account_name = "myapptfstatevi7pkc"
     container_name       = "tfstate"
     key                  = "myapp.terraform.tfstate"
   }
@@ -28,9 +28,12 @@ terraform {
 provider "azurerm" {
   features {}
   subscription_id = var.subscription_id
+  tenant_id       = var.tenant_id
 }
 
-provider "azuread" {}
+provider "azuread" {
+  tenant_id = var.tenant_id
+}
 
 resource "random_string" "suffix" {
   length  = 6

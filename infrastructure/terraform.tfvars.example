@@ -1,8 +1,5 @@
-subscription_id        = "6d131d4e-a1de-4504-ba87-5fafdb9c24da"
-location               = "eastus"
-app_name               = "myapp"
-environment            = "prod"
-jenkins_vm_size        = "Standard_B2s"
-jenkins_admin_username = "jenkinsadmin"
-jenkins_admin_password = "ChangeMe123!"   # Must: 12+ chars, uppercase, lowercase, number, symbol
-app_service_sku        = "B1"
+subscription_id = "6d131d4e-a1de-4504-ba87-5fafdb9c24da"
+location        = "eastus"
+app_name        = "myapp"
+environment     = "prod"
+app_service_sku = "F1"
