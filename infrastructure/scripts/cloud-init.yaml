@@ -1,0 +1,38 @@
+#cloud-config
+package_update: true
+package_upgrade: true
+
+packages:
+  - curl
+  - wget
+  - git
+  - apt-transport-https
+  - ca-certificates
+  - gnupg
+  - lsb-release
+  - zip
+  - unzip
+  - openjdk-17-jdk
+
+runcmd:
+  # Install Jenkins
+  - curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | tee /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+  - echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/" | tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+  - apt-get update -qq
+  - apt-get install -y jenkins
+
+  # Install .NET 8 SDK via Microsoft package feed
+  - wget https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb -O /tmp/packages-microsoft-prod.deb
+  - dpkg -i /tmp/packages-microsoft-prod.deb
+  - apt-get update -qq
+  - apt-get install -y dotnet-sdk-8.0
+
+  # Install Azure CLI
+  - curl -sL https://aka.ms/InstallAzureCLIDeb | bash
+
+  # Enable and start Jenkins
+  - systemctl daemon-reload
+  - systemctl enable jenkins
+  - systemctl start jenkins
+
+final_message: "Bootstrap complete. Jenkins available at port 8080 in ~3 minutes."
