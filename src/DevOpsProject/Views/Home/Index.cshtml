@@ -2,28 +2,158 @@
     ViewData["Title"] = "Home";
 }
 
-<div class="text-center py-5">
-    <h1 class="display-4 fw-bold">Welcome to MyApp</h1>
-    <p class="lead text-muted">Enterprise .NET 8 Application on Azure</p>
-    <hr class="my-4" />
-    <div class="row justify-content-center mt-4">
-        <div class="col-md-4">
-            <div class="card border-0 shadow-sm p-3">
-                <h5>CI/CD</h5>
-                <p class="text-muted mb-0">Jenkins Pipeline</p>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card border-0 shadow-sm p-3">
-                <h5>Infrastructure</h5>
-                <p class="text-muted mb-0">Terraform on Azure</p>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card border-0 shadow-sm p-3">
-                <h5>Runtime</h5>
-                <p class="text-muted mb-0">.NET 8 / Azure Web App</p>
+<!-- Hero -->
+<section class="hero">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <p class="text-warning small fw-semibold mb-2 text-uppercase letter-spacing-1">Nigeria's Trusted Energy Partner</p>
+                <h1>Powering <span>Nigeria's</span><br/>Energy Future</h1>
+                <p class="lead mt-3 mb-4">
+                    ASMAS Energy delivers reliable petroleum products, exploration services, and integrated energy solutions across Ondo State and beyond.
+                </p>
+                <div class="d-flex flex-wrap gap-3">
+                    <a asp-controller="Home" asp-action="Services" class="btn btn-gold">Our Services</a>
+                    <a asp-controller="Home" asp-action="Contact" class="btn btn-outline-gold">Get in Touch</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>
+
+<!-- Stats -->
+<section class="stats-bar">
+    <div class="container">
+        <div class="row text-center g-4">
+            <div class="col-6 col-md-3 stat-item">
+                <h3>5+</h3>
+                <p class="mb-0 small text-secondary">Years in Operation</p>
+            </div>
+            <div class="col-6 col-md-3 stat-item">
+                <h3>5</h3>
+                <p class="mb-0 small text-secondary">Service Lines</p>
+            </div>
+            <div class="col-6 col-md-3 stat-item">
+                <h3>100%</h3>
+                <p class="mb-0 small text-secondary">Nigerian Owned</p>
+            </div>
+            <div class="col-6 col-md-3 stat-item">
+                <h3>24/7</h3>
+                <p class="mb-0 small text-secondary">Customer Support</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Overview -->
+<section class="py-5" style="background: var(--light-bg, #f5f5f0);">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title centered mx-auto">What We Do</h2>
+            <p class="text-muted mt-3 mx-auto" style="max-width:560px;">From oil exploration to daily consumer services, ASMAS Energy offers an integrated portfolio of energy and lifestyle services.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa fa-search-location"></i></div>
+                    <h5>Oil & Gas Exploration</h5>
+                    <p class="text-muted small">Professional prospecting, site evaluation, and resource assessment services across the Niger Delta region.</p>
+                    <a asp-controller="Home" asp-action="Services" class="small fw-semibold text-warning text-decoration-none">Learn more &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa fa-gas-pump"></i></div>
+                    <h5>Petroleum Supply & Distribution</h5>
+                    <p class="text-muted small">Bulk supply and reliable distribution of quality petroleum products to businesses and consumers across the region.</p>
+                    <a asp-controller="Home" asp-action="Services" class="small fw-semibold text-warning text-decoration-none">Learn more &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa fa-car"></i></div>
+                    <h5>Car Wash</h5>
+                    <p class="text-muted small">Professional vehicle cleaning and detailing services using quality products to keep your vehicle in top condition.</p>
+                    <a asp-controller="Home" asp-action="Services" class="small fw-semibold text-warning text-decoration-none">Learn more &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa fa-oil-can"></i></div>
+                    <h5>Lubrication Center</h5>
+                    <p class="text-muted small">Comprehensive engine oil and lubrication services for all vehicle types using certified, premium-grade lubricants.</p>
+                    <a asp-controller="Home" asp-action="Services" class="small fw-semibold text-warning text-decoration-none">Learn more &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa fa-store"></i></div>
+                    <h5>Mini Mart</h5>
+                    <p class="text-muted small">A well-stocked convenience store offering groceries, drinks, snacks, and everyday essentials for our customers.</p>
+                    <a asp-controller="Home" asp-action="Services" class="small fw-semibold text-warning text-decoration-none">Learn more &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 d-flex align-items-center justify-content-center">
+                <div class="text-center p-4">
+                    <p class="text-muted mb-3">Need a custom energy solution for your business?</p>
+                    <a asp-controller="Home" asp-action="Contact" class="btn btn-gold">Contact Us Today</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Snippet -->
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <h2 class="section-title">About ASMAS Energy</h2>
+                <p class="text-muted mt-4">
+                    ASMAS Energy is a proudly Nigerian-owned energy company headquartered in Akure, Ondo State. We are committed to delivering quality energy products and services that power homes, businesses, and vehicles across the region.
+                </p>
+                <p class="text-muted">
+                    Our integrated service model — spanning oil exploration, petroleum distribution, vehicle care, and retail — positions us as a one-stop energy and lifestyle hub for our community.
+                </p>
+                <a asp-controller="Home" asp-action="About" class="btn btn-gold mt-2">Learn More About Us</a>
+            </div>
+            <div class="col-lg-6">
+                <div class="row g-3">
+                    <div class="col-6">
+                        <div class="value-card">
+                            <h6><i class="fa fa-shield-alt me-2 text-warning"></i>Integrity</h6>
+                            <p class="small text-muted mb-0">We operate with transparency and honesty in every transaction.</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="value-card">
+                            <h6><i class="fa fa-star me-2 text-warning"></i>Quality</h6>
+                            <p class="small text-muted mb-0">Only certified, premium-grade products and services.</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="value-card">
+                            <h6><i class="fa fa-users me-2 text-warning"></i>Community</h6>
+                            <p class="small text-muted mb-0">Proudly serving and empowering Akure and Ondo State.</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="value-card">
+                            <h6><i class="fa fa-leaf me-2 text-warning"></i>Sustainability</h6>
+                            <p class="small text-muted mb-0">Responsible energy practices for a better tomorrow.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Banner -->
+<section class="py-5" style="background: var(--navy, #0d1b2a);">
+    <div class="container text-center text-white">
+        <h2 class="fw-bold mb-3">Ready to Work With Us?</h2>
+        <p class="text-secondary mb-4">Reach out to our team in Akure today and let's discuss how ASMAS Energy can serve your needs.</p>
+        <a asp-controller="Home" asp-action="Contact" class="btn btn-gold btn-lg">Get in Touch</a>
+    </div>
+</section>
