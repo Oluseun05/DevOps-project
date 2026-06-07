@@ -608,3 +608,75 @@ body {
     color: var(--gold);
     margin: 0 auto 1.5rem;
 }
+
+/* ── Image Panels ── */
+.img-panel {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.panel-watermark {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4.5rem;
+    color: rgba(200,150,42,0.07);
+    pointer-events: none;
+}
+
+.panel-badge {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background: rgba(13,27,42,0.82);
+    color: var(--gold);
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.35rem 0.85rem;
+    border-radius: 50px;
+    letter-spacing: 0.5px;
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(200,150,42,0.25);
+}
+
+.hero-visual-wrap { position: relative; z-index: 1; }
+
+.hero-visual-wrap::after {
+    content: '';
+    position: absolute;
+    top: -12px; right: -12px; bottom: 12px; left: 12px;
+    border: 2px solid rgba(200,150,42,0.18);
+    border-radius: 16px;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.hero-visual {
+    height: 400px;
+    background: linear-gradient(135deg, #0d1b2a 0%, #1a3a5c 100%);
+    border-radius: 14px;
+    border: 1px solid rgba(200,150,42,0.15);
+    box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+}
+
+.service-visual {
+    height: 280px;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.5s ease;
+}
+
+.service-visual:hover { transform: scale(1.02); }
+
+.about-visual {
+    height: 340px;
+    background: linear-gradient(135deg, var(--navy) 0%, #0f2744 60%, var(--navy-light) 100%);
+    border-radius: var(--radius);
+    border: 1px solid rgba(200,150,42,0.12);
+    box-shadow: var(--shadow-lg);
+}
