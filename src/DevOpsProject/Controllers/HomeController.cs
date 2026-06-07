@@ -19,7 +19,18 @@ public class HomeController : Controller
 
     public IActionResult Services() => View();
 
-    public IActionResult Contact() => View();
+    public IActionResult Contact() => View(new ContactFormModel());
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult ContactSubmit(ContactFormModel model)
+    {
+        _logger.LogInformation("Contact form submitted by {Name} ({Email}) — Service: {Service}",
+            model.FullName, model.Email, model.ServiceInterest);
+
+        TempData["Success"] = "true";
+        return RedirectToAction(nameof(Contact));
+    }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

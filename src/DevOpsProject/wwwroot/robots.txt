@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://asmas-energy-2shusj.azurewebsites.net/sitemap.xml

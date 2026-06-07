@@ -5,54 +5,74 @@
 <!-- Services Hero -->
 <section class="about-hero">
     <div class="container">
-        <p class="text-warning small text-uppercase fw-semibold mb-2">What We Offer</p>
-        <h1 class="fw-bold mb-3">Our Services</h1>
-        <p class="text-secondary" style="max-width:580px;">From petroleum exploration to everyday convenience, ASMAS Energy delivers an integrated range of services designed to meet the energy and lifestyle needs of Ondo State.</p>
+        <span class="section-label" data-aos="fade-down">What We Offer</span>
+        <h1 class="fw-bold mb-3" data-aos="fade-up" data-aos-delay="100">Our Services</h1>
+        <p data-aos="fade-up" data-aos-delay="200" style="color:#8fa8c0; max-width:560px;">
+            From petroleum exploration to everyday convenience, ASMAS Energy delivers an integrated range of services designed to meet the energy and lifestyle needs of Ondo State.
+        </p>
     </div>
 </section>
 
 <!-- Service 1: Oil & Gas Exploration -->
 <section class="py-5">
     <div class="container">
-        <div class="row align-items-center g-5">
-            <div class="col-lg-2 text-center">
-                <div class="service-icon mx-auto" style="width:80px;height:80px;font-size:2rem;"><i class="fa fa-search-location"></i></div>
+        <div class="row align-items-center g-5" data-aos="fade-up">
+            <div class="col-lg-1 d-none d-lg-flex justify-content-center">
+                <div class="service-icon" style="width:72px;height:72px;font-size:1.8rem;"><i class="fa fa-search-location"></i></div>
             </div>
-            <div class="col-lg-10">
-                <h3 class="fw-bold" style="color:var(--navy);">Oil & Gas Exploration</h3>
-                <p class="text-muted mt-2">
+            <div class="col-lg-11">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div class="service-icon d-lg-none"><i class="fa fa-search-location"></i></div>
+                    <div>
+                        <span class="news-tag">Service 01</span>
+                        <h3 class="fw-bold mb-0" style="color:var(--navy);">Oil & Gas Exploration</h3>
+                    </div>
+                </div>
+                <p class="text-muted">
                     ASMAS Energy provides professional oil and gas exploration support services, including site surveys, resource evaluation, and field assessments across the Niger Delta and Southwest Nigeria. We work with partners to identify viable energy resources while adhering to Nigerian regulatory standards set by the Department of Petroleum Resources (DPR).
                 </p>
-                <ul class="text-muted small">
-                    <li>Site surveys and feasibility studies</li>
-                    <li>Resource assessment and reporting</li>
-                    <li>Regulatory compliance support</li>
-                    <li>Field operations coordination</li>
-                </ul>
+                <div class="row g-2 mt-2">
+                    @foreach (var item in new[]{"Site surveys and feasibility studies","Resource assessment and reporting","Regulatory compliance support (DPR)","Field operations coordination"}) {
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2 small text-muted">
+                                <i class="fa fa-check-circle text-gold"></i><span>@item</span>
+                            </div>
+                        </div>
+                    }
+                </div>
             </div>
         </div>
-        <hr class="mt-4" />
+        <hr class="mt-5" />
     </div>
 </section>
 
 <!-- Service 2: Petroleum Supply -->
-<section class="py-5" style="background:#f5f5f0;">
+<section class="py-5" style="background:var(--light-bg);">
     <div class="container">
-        <div class="row align-items-center g-5">
-            <div class="col-lg-2 text-center">
-                <div class="service-icon mx-auto" style="width:80px;height:80px;font-size:2rem;"><i class="fa fa-gas-pump"></i></div>
+        <div class="row align-items-center g-5" data-aos="fade-up">
+            <div class="col-lg-1 d-none d-lg-flex justify-content-center">
+                <div class="service-icon" style="width:72px;height:72px;font-size:1.8rem;"><i class="fa fa-gas-pump"></i></div>
             </div>
-            <div class="col-lg-10">
-                <h3 class="fw-bold" style="color:var(--navy);">Petroleum Supply & Distribution</h3>
-                <p class="text-muted mt-2">
+            <div class="col-lg-11">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div class="service-icon d-lg-none"><i class="fa fa-gas-pump"></i></div>
+                    <div>
+                        <span class="news-tag">Service 02</span>
+                        <h3 class="fw-bold mb-0" style="color:var(--navy);">Petroleum Supply & Distribution</h3>
+                    </div>
+                </div>
+                <p class="text-muted">
                     We are a trusted supplier of quality petroleum products serving businesses, fleet operators, and individual customers in Akure and across Ondo State. Our distribution network ensures timely and reliable delivery of petrol, diesel, and kerosene at competitive prices.
                 </p>
-                <ul class="text-muted small">
-                    <li>Petrol (PMS) supply</li>
-                    <li>Diesel (AGO) supply for businesses and generators</li>
-                    <li>Kerosene (DPK) distribution</li>
-                    <li>Bulk supply for fleet and commercial clients</li>
-                </ul>
+                <div class="row g-2 mt-2">
+                    @foreach (var item in new[]{"Petrol (PMS) supply","Diesel (AGO) for businesses & generators","Kerosene (DPK) distribution","Bulk supply for fleet & commercial clients"}) {
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2 small text-muted">
+                                <i class="fa fa-check-circle text-gold"></i><span>@item</span>
+                            </div>
+                        </div>
+                    }
+                </div>
             </div>
         </div>
     </div>
@@ -61,45 +81,63 @@
 <!-- Service 3: Car Wash -->
 <section class="py-5">
     <div class="container">
-        <div class="row align-items-center g-5">
-            <div class="col-lg-2 text-center">
-                <div class="service-icon mx-auto" style="width:80px;height:80px;font-size:2rem;"><i class="fa fa-car"></i></div>
+        <div class="row align-items-center g-5" data-aos="fade-up">
+            <div class="col-lg-1 d-none d-lg-flex justify-content-center">
+                <div class="service-icon" style="width:72px;height:72px;font-size:1.8rem;"><i class="fa fa-car"></i></div>
             </div>
-            <div class="col-lg-10">
-                <h3 class="fw-bold" style="color:var(--navy);">Car Wash</h3>
-                <p class="text-muted mt-2">
+            <div class="col-lg-11">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div class="service-icon d-lg-none"><i class="fa fa-car"></i></div>
+                    <div>
+                        <span class="news-tag">Service 03</span>
+                        <h3 class="fw-bold mb-0" style="color:var(--navy);">Car Wash</h3>
+                    </div>
+                </div>
+                <p class="text-muted">
                     Our professional car wash facility at Itaogbolu, Akure North offers thorough exterior and interior cleaning services for all vehicle types. We use quality cleaning products and experienced staff to ensure your vehicle leaves spotless every time.
                 </p>
-                <ul class="text-muted small">
-                    <li>Full exterior body wash</li>
-                    <li>Interior vacuuming and cleaning</li>
-                    <li>Tyre and rim cleaning</li>
-                    <li>Express wash available</li>
-                </ul>
+                <div class="row g-2 mt-2">
+                    @foreach (var item in new[]{"Full exterior body wash","Interior vacuuming and cleaning","Tyre and rim cleaning","Express wash available"}) {
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2 small text-muted">
+                                <i class="fa fa-check-circle text-gold"></i><span>@item</span>
+                            </div>
+                        </div>
+                    }
+                </div>
             </div>
         </div>
-        <hr class="mt-4" />
+        <hr class="mt-5" />
     </div>
 </section>
 
 <!-- Service 4: Lubrication Center -->
-<section class="py-5" style="background:#f5f5f0;">
+<section class="py-5" style="background:var(--light-bg);">
     <div class="container">
-        <div class="row align-items-center g-5">
-            <div class="col-lg-2 text-center">
-                <div class="service-icon mx-auto" style="width:80px;height:80px;font-size:2rem;"><i class="fa fa-oil-can"></i></div>
+        <div class="row align-items-center g-5" data-aos="fade-up">
+            <div class="col-lg-1 d-none d-lg-flex justify-content-center">
+                <div class="service-icon" style="width:72px;height:72px;font-size:1.8rem;"><i class="fa fa-oil-can"></i></div>
             </div>
-            <div class="col-lg-10">
-                <h3 class="fw-bold" style="color:var(--navy);">Lubrication Center</h3>
-                <p class="text-muted mt-2">
-                    Keep your engine in peak condition with our certified lubrication services. ASMAS Energy's lubrication center offers oil changes, filter replacements, and full-service lubrication for cars, trucks, and commercial vehicles using premium-grade lubricants from trusted brands.
+            <div class="col-lg-11">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div class="service-icon d-lg-none"><i class="fa fa-oil-can"></i></div>
+                    <div>
+                        <span class="news-tag">Service 04</span>
+                        <h3 class="fw-bold mb-0" style="color:var(--navy);">Lubrication Center</h3>
+                    </div>
+                </div>
+                <p class="text-muted">
+                    Keep your engine in peak condition with our certified lubrication services. ASMAS Energy's lubrication center offers oil changes, filter replacements and full-service lubrication for cars, trucks, and commercial vehicles using premium-grade lubricants from trusted brands including Castrol, Shell Helix and Total Quartz.
                 </p>
-                <ul class="text-muted small">
-                    <li>Engine oil change (all grades)</li>
-                    <li>Oil filter and air filter replacement</li>
-                    <li>Gear oil and transmission fluid service</li>
-                    <li>Brake fluid top-up</li>
-                </ul>
+                <div class="row g-2 mt-2">
+                    @foreach (var item in new[]{"Engine oil change (all grades)","Oil & air filter replacement","Gear oil & transmission fluid service","Brake fluid top-up"}) {
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2 small text-muted">
+                                <i class="fa fa-check-circle text-gold"></i><span>@item</span>
+                            </div>
+                        </div>
+                    }
+                </div>
             </div>
         </div>
     </div>
@@ -108,21 +146,30 @@
 <!-- Service 5: Mini Mart -->
 <section class="py-5">
     <div class="container">
-        <div class="row align-items-center g-5">
-            <div class="col-lg-2 text-center">
-                <div class="service-icon mx-auto" style="width:80px;height:80px;font-size:2rem;"><i class="fa fa-store"></i></div>
+        <div class="row align-items-center g-5" data-aos="fade-up">
+            <div class="col-lg-1 d-none d-lg-flex justify-content-center">
+                <div class="service-icon" style="width:72px;height:72px;font-size:1.8rem;"><i class="fa fa-store"></i></div>
             </div>
-            <div class="col-lg-10">
-                <h3 class="fw-bold" style="color:var(--navy);">Mini Mart</h3>
-                <p class="text-muted mt-2">
-                    Our on-site mini mart is stocked with a wide range of everyday essentials — perfect for customers stopping in to refuel or service their vehicles. From drinks and snacks to groceries and toiletries, everything you need is right here at ASMAS Energy.
+            <div class="col-lg-11">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div class="service-icon d-lg-none"><i class="fa fa-store"></i></div>
+                    <div>
+                        <span class="news-tag">Service 05</span>
+                        <h3 class="fw-bold mb-0" style="color:var(--navy);">Mini Mart</h3>
+                    </div>
+                </div>
+                <p class="text-muted">
+                    Our on-site mini mart is stocked with a wide range of everyday essentials — perfect for customers stopping to refuel or service their vehicles. Everything you need in one convenient location at ASMAS Energy.
                 </p>
-                <ul class="text-muted small">
-                    <li>Soft drinks, water, and beverages</li>
-                    <li>Snacks, biscuits, and confectionery</li>
-                    <li>Groceries and household essentials</li>
-                    <li>Toiletries and personal care products</li>
-                </ul>
+                <div class="row g-2 mt-2">
+                    @foreach (var item in new[]{"Soft drinks, water & beverages","Snacks, biscuits & confectionery","Groceries & household essentials","Toiletries & personal care products"}) {
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2 small text-muted">
+                                <i class="fa fa-check-circle text-gold"></i><span>@item</span>
+                            </div>
+                        </div>
+                    }
+                </div>
             </div>
         </div>
     </div>
@@ -130,9 +177,16 @@
 
 <!-- CTA -->
 <section class="py-5" style="background:var(--navy);">
-    <div class="container text-center text-white">
-        <h2 class="fw-bold mb-3">Interested in Any of Our Services?</h2>
-        <p class="text-secondary mb-4">Get in touch with our team and we'll be happy to assist you.</p>
-        <a asp-controller="Home" asp-action="Contact" class="btn btn-gold btn-lg">Contact ASMAS Energy</a>
+    <div class="container text-center" data-aos="fade-up">
+        <h2 class="fw-bold text-white mb-3">Interested in Any of Our Services?</h2>
+        <p class="mb-4" style="color:#8fa8c0;">Get in touch and our team will be happy to assist you right away.</p>
+        <div class="d-flex justify-content-center flex-wrap gap-3">
+            <a asp-controller="Home" asp-action="Contact" class="btn btn-gold btn-lg">
+                <i class="fa fa-envelope me-2"></i>Contact Us
+            </a>
+            <a href="https://wa.me/2347079536875" target="_blank" class="btn btn-lg" style="background:#25d366;color:#fff;border:none;">
+                <i class="fab fa-whatsapp me-2"></i>WhatsApp Us
+            </a>
+        </div>
     </div>
 </section>

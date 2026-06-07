@@ -4,19 +4,49 @@
 
 <!-- Hero -->
 <section class="hero">
-    <div class="container">
+    <div class="container position-relative">
         <div class="row align-items-center">
             <div class="col-lg-7">
-                <p class="text-warning small fw-semibold mb-2 text-uppercase letter-spacing-1">Nigeria's Trusted Energy Partner</p>
-                <h1>Powering <span>Nigeria's</span><br/>Energy Future</h1>
-                <p class="lead mt-3 mb-4">
+                <div class="hero-badge" data-aos="fade-down">Nigeria's Trusted Energy Partner</div>
+                <h1 data-aos="fade-up" data-aos-delay="100">
+                    Powering <span>Nigeria's</span><br/>Energy Future
+                </h1>
+                <p class="lead mt-3 mb-4" data-aos="fade-up" data-aos-delay="200">
                     ASMAS Energy delivers reliable petroleum products, exploration services, and integrated energy solutions across Ondo State and beyond.
                 </p>
-                <div class="d-flex flex-wrap gap-3">
-                    <a asp-controller="Home" asp-action="Services" class="btn btn-gold">Our Services</a>
-                    <a asp-controller="Home" asp-action="Contact" class="btn btn-outline-gold">Get in Touch</a>
+                <div class="d-flex flex-wrap gap-3" data-aos="fade-up" data-aos-delay="300">
+                    <a asp-controller="Home" asp-action="Services" class="btn btn-gold">
+                        <i class="fa fa-th-large me-2"></i>Our Services
+                    </a>
+                    <a asp-controller="Home" asp-action="Contact" class="btn btn-outline-gold">
+                        <i class="fa fa-phone me-2"></i>Get in Touch
+                    </a>
+                </div>
+                <div class="mt-4 d-flex align-items-center gap-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="d-flex">
+                        @for (int i = 0; i < 5; i++) {
+                            <div class="testimonial-avatar" style="width:32px;height:32px;font-size:0.7rem;margin-left:@(i==0?"0":"-8px");border:2px solid #0d1b2a;">
+                                <i class="fa fa-user" style="font-size:0.75rem;"></i>
+                            </div>
+                        }
+                    </div>
+                    <p class="mb-0 small text-secondary">Trusted by <strong class="text-white">500+</strong> customers across Ondo State</p>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- Partner Bar -->
+<section class="partner-bar">
+    <div class="container">
+        <p class="text-center small text-muted mb-3" style="letter-spacing:1px; text-transform:uppercase; font-size:0.75rem;">Affiliated & Working With</p>
+        <div class="row align-items-center justify-content-center g-4">
+            <div class="col-auto"><span class="partner-logo">NNPC</span></div>
+            <div class="col-auto"><span class="partner-logo">DPR Nigeria</span></div>
+            <div class="col-auto"><span class="partner-logo">Total Energies</span></div>
+            <div class="col-auto"><span class="partner-logo">Ondo State Govt</span></div>
+            <div class="col-auto"><span class="partner-logo">NUPENG</span></div>
         </div>
     </div>
 </section>
@@ -25,78 +55,80 @@
 <section class="stats-bar">
     <div class="container">
         <div class="row text-center g-4">
-            <div class="col-6 col-md-3 stat-item">
+            <div class="col-6 col-md-3 stat-item" data-aos="fade-up" data-aos-delay="0">
                 <h3>5+</h3>
-                <p class="mb-0 small text-secondary">Years in Operation</p>
+                <p>Years in Operation</p>
             </div>
-            <div class="col-6 col-md-3 stat-item">
+            <div class="col-6 col-md-3 stat-item" data-aos="fade-up" data-aos-delay="100">
+                <h3>500+</h3>
+                <p>Customers Served</p>
+            </div>
+            <div class="col-6 col-md-3 stat-item" data-aos="fade-up" data-aos-delay="200">
                 <h3>5</h3>
-                <p class="mb-0 small text-secondary">Service Lines</p>
+                <p>Service Lines</p>
             </div>
-            <div class="col-6 col-md-3 stat-item">
-                <h3>100%</h3>
-                <p class="mb-0 small text-secondary">Nigerian Owned</p>
-            </div>
-            <div class="col-6 col-md-3 stat-item">
+            <div class="col-6 col-md-3 stat-item" data-aos="fade-up" data-aos-delay="300">
                 <h3>24/7</h3>
-                <p class="mb-0 small text-secondary">Customer Support</p>
+                <p>Customer Support</p>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Services Overview -->
-<section class="py-5" style="background: var(--light-bg, #f5f5f0);">
+<section class="py-5" style="background: var(--light-bg);">
     <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="section-title centered mx-auto">What We Do</h2>
-            <p class="text-muted mt-3 mx-auto" style="max-width:560px;">From oil exploration to daily consumer services, ASMAS Energy offers an integrated portfolio of energy and lifestyle services.</p>
+        <div class="text-center mb-5" data-aos="fade-up">
+            <span class="section-label">What We Do</span>
+            <h2 class="section-title centered mx-auto">Integrated Energy Solutions</h2>
+            <p class="text-muted mt-3 mx-auto" style="max-width:520px;">From oil exploration to everyday consumer services — ASMAS Energy is your one-stop energy partner.</p>
         </div>
         <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
                 <div class="service-card">
                     <div class="service-icon"><i class="fa fa-search-location"></i></div>
                     <h5>Oil & Gas Exploration</h5>
-                    <p class="text-muted small">Professional prospecting, site evaluation, and resource assessment services across the Niger Delta region.</p>
-                    <a asp-controller="Home" asp-action="Services" class="small fw-semibold text-warning text-decoration-none">Learn more &rarr;</a>
+                    <p class="text-muted small">Site evaluation, resource assessment and field operations across the Niger Delta region.</p>
+                    <a asp-controller="Home" asp-action="Services" class="small fw-semibold text-gold text-decoration-none">Learn more &rarr;</a>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                 <div class="service-card">
                     <div class="service-icon"><i class="fa fa-gas-pump"></i></div>
                     <h5>Petroleum Supply & Distribution</h5>
-                    <p class="text-muted small">Bulk supply and reliable distribution of quality petroleum products to businesses and consumers across the region.</p>
-                    <a asp-controller="Home" asp-action="Services" class="small fw-semibold text-warning text-decoration-none">Learn more &rarr;</a>
+                    <p class="text-muted small">Reliable bulk supply of PMS, AGO and DPK to businesses and consumers across the region.</p>
+                    <a asp-controller="Home" asp-action="Services" class="small fw-semibold text-gold text-decoration-none">Learn more &rarr;</a>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
                 <div class="service-card">
                     <div class="service-icon"><i class="fa fa-car"></i></div>
                     <h5>Car Wash</h5>
-                    <p class="text-muted small">Professional vehicle cleaning and detailing services using quality products to keep your vehicle in top condition.</p>
-                    <a asp-controller="Home" asp-action="Services" class="small fw-semibold text-warning text-decoration-none">Learn more &rarr;</a>
+                    <p class="text-muted small">Professional vehicle cleaning and detailing services using quality products.</p>
+                    <a asp-controller="Home" asp-action="Services" class="small fw-semibold text-gold text-decoration-none">Learn more &rarr;</a>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
                 <div class="service-card">
                     <div class="service-icon"><i class="fa fa-oil-can"></i></div>
                     <h5>Lubrication Center</h5>
-                    <p class="text-muted small">Comprehensive engine oil and lubrication services for all vehicle types using certified, premium-grade lubricants.</p>
-                    <a asp-controller="Home" asp-action="Services" class="small fw-semibold text-warning text-decoration-none">Learn more &rarr;</a>
+                    <p class="text-muted small">Engine oil changes, filter replacements and full lubrication services for all vehicle types.</p>
+                    <a asp-controller="Home" asp-action="Services" class="small fw-semibold text-gold text-decoration-none">Learn more &rarr;</a>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                 <div class="service-card">
                     <div class="service-icon"><i class="fa fa-store"></i></div>
                     <h5>Mini Mart</h5>
-                    <p class="text-muted small">A well-stocked convenience store offering groceries, drinks, snacks, and everyday essentials for our customers.</p>
-                    <a asp-controller="Home" asp-action="Services" class="small fw-semibold text-warning text-decoration-none">Learn more &rarr;</a>
+                    <p class="text-muted small">Well-stocked convenience store with groceries, drinks, snacks and everyday essentials.</p>
+                    <a asp-controller="Home" asp-action="Services" class="small fw-semibold text-gold text-decoration-none">Learn more &rarr;</a>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4 d-flex align-items-center justify-content-center">
+            <div class="col-md-6 col-lg-4 d-flex align-items-center justify-content-center" data-aos="fade-up" data-aos-delay="200">
                 <div class="text-center p-4">
-                    <p class="text-muted mb-3">Need a custom energy solution for your business?</p>
-                    <a asp-controller="Home" asp-action="Contact" class="btn btn-gold">Contact Us Today</a>
+                    <div class="service-icon mx-auto mb-3" style="width:56px;height:56px;"><i class="fa fa-headset"></i></div>
+                    <p class="text-muted small mb-3">Need a custom energy solution for your business?</p>
+                    <a asp-controller="Home" asp-action="Contact" class="btn btn-gold btn-sm">Talk to Us</a>
                 </div>
             </div>
         </div>
@@ -107,40 +139,41 @@
 <section class="py-5">
     <div class="container">
         <div class="row align-items-center g-5">
-            <div class="col-lg-6">
+            <div class="col-lg-6" data-aos="fade-right">
+                <span class="section-label">Who We Are</span>
                 <h2 class="section-title">About ASMAS Energy</h2>
                 <p class="text-muted mt-4">
                     ASMAS Energy is a proudly Nigerian-owned energy company headquartered in Akure, Ondo State. We are committed to delivering quality energy products and services that power homes, businesses, and vehicles across the region.
                 </p>
                 <p class="text-muted">
-                    Our integrated service model — spanning oil exploration, petroleum distribution, vehicle care, and retail — positions us as a one-stop energy and lifestyle hub for our community.
+                    Our integrated service model spans oil exploration, petroleum distribution, vehicle care, and retail — positioning us as a one-stop energy and lifestyle hub for our community.
                 </p>
                 <a asp-controller="Home" asp-action="About" class="btn btn-gold mt-2">Learn More About Us</a>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6" data-aos="fade-left">
                 <div class="row g-3">
                     <div class="col-6">
                         <div class="value-card">
-                            <h6><i class="fa fa-shield-alt me-2 text-warning"></i>Integrity</h6>
-                            <p class="small text-muted mb-0">We operate with transparency and honesty in every transaction.</p>
+                            <h6><i class="fa fa-shield-alt me-2 text-gold"></i>Integrity</h6>
+                            <p class="small text-muted mb-0">Transparency and honesty in every transaction.</p>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="value-card">
-                            <h6><i class="fa fa-star me-2 text-warning"></i>Quality</h6>
-                            <p class="small text-muted mb-0">Only certified, premium-grade products and services.</p>
+                            <h6><i class="fa fa-star me-2 text-gold"></i>Quality</h6>
+                            <p class="small text-muted mb-0">Certified, premium-grade products and services.</p>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="value-card">
-                            <h6><i class="fa fa-users me-2 text-warning"></i>Community</h6>
-                            <p class="small text-muted mb-0">Proudly serving and empowering Akure and Ondo State.</p>
+                            <h6><i class="fa fa-users me-2 text-gold"></i>Community</h6>
+                            <p class="small text-muted mb-0">Proudly serving and empowering Ondo State.</p>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="value-card">
-                            <h6><i class="fa fa-leaf me-2 text-warning"></i>Sustainability</h6>
-                            <p class="small text-muted mb-0">Responsible energy practices for a better tomorrow.</p>
+                            <h6><i class="fa fa-leaf me-2 text-gold"></i>Sustainability</h6>
+                            <p class="small text-muted mb-0">Responsible energy practices for tomorrow.</p>
                         </div>
                     </div>
                 </div>
@@ -149,11 +182,126 @@
     </div>
 </section>
 
-<!-- CTA Banner -->
-<section class="py-5" style="background: var(--navy, #0d1b2a);">
-    <div class="container text-center text-white">
-        <h2 class="fw-bold mb-3">Ready to Work With Us?</h2>
-        <p class="text-secondary mb-4">Reach out to our team in Akure today and let's discuss how ASMAS Energy can serve your needs.</p>
-        <a asp-controller="Home" asp-action="Contact" class="btn btn-gold btn-lg">Get in Touch</a>
+<!-- Testimonials -->
+<section class="py-5" style="background:var(--light-bg);">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <span class="section-label">What Clients Say</span>
+            <h2 class="section-title centered mx-auto">Customer Testimonials</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+                <div class="testimonial-card">
+                    <span class="quote-icon">"</span>
+                    <div class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                    <p>"ASMAS Energy has been supplying diesel to my logistics company for over two years. Reliable, punctual and the quality is always top-notch. Highly recommended."</p>
+                    <div class="d-flex align-items-center gap-3 mt-3">
+                        <div class="testimonial-avatar">AO</div>
+                        <div>
+                            <div class="fw-semibold small" style="color:var(--navy);">Adebayo Olusola</div>
+                            <div class="small text-muted">Fleet Manager, Akure</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="testimonial-card">
+                    <span class="quote-icon">"</span>
+                    <div class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                    <p>"Their car wash and lubrication services are the best in Akure North. My vehicle always comes out spotless and the staff are very professional and friendly."</p>
+                    <div class="d-flex align-items-center gap-3 mt-3">
+                        <div class="testimonial-avatar">FN</div>
+                        <div>
+                            <div class="fw-semibold small" style="color:var(--navy);">Funmilayo Nwachukwu</div>
+                            <div class="small text-muted">Business Owner, Itaogbolu</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="testimonial-card">
+                    <span class="quote-icon">"</span>
+                    <div class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
+                    <p>"The mini mart is very convenient — I stop to refuel and pick up essentials in one visit. ASMAS Energy has truly made life easier for us in this community."</p>
+                    <div class="d-flex align-items-center gap-3 mt-3">
+                        <div class="testimonial-avatar">KA</div>
+                        <div>
+                            <div class="fw-semibold small" style="color:var(--navy);">Kunle Adeyemi</div>
+                            <div class="small text-muted">Teacher, Akure North LGA</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- News & Updates -->
+<section class="py-5">
+    <div class="container">
+        <div class="d-flex align-items-center justify-content-between mb-5" data-aos="fade-up">
+            <div>
+                <span class="section-label">Latest Updates</span>
+                <h2 class="section-title mb-0">News & Announcements</h2>
+            </div>
+            <a asp-controller="Home" asp-action="About" class="btn btn-outline-gold btn-sm d-none d-md-inline-block">View All</a>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+                <div class="news-card">
+                    <div class="news-card-header">
+                        <i class="fa fa-gas-pump fa-2x text-gold opacity-75"></i>
+                    </div>
+                    <div class="news-card-body">
+                        <div class="news-tag">Distribution</div>
+                        <h6>ASMAS Energy Expands Petroleum Distribution Network Across Ondo State</h6>
+                        <p class="small text-muted mt-2">We are excited to announce expanded coverage areas for our bulk petroleum supply service, now reaching more communities across Akure North LGA.</p>
+                        <div class="news-date mt-2"><i class="fa fa-calendar me-1"></i>May 2026</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="news-card">
+                    <div class="news-card-header">
+                        <i class="fa fa-oil-can fa-2x text-gold opacity-75"></i>
+                    </div>
+                    <div class="news-card-body">
+                        <div class="news-tag">Services</div>
+                        <h6>New Lubrication Center Upgrade — Premium Engine Oil Brands Now Available</h6>
+                        <p class="small text-muted mt-2">Our lubrication center has been upgraded with new equipment and now stocks premium brands including Castrol, Shell Helix, and Total Quartz.</p>
+                        <div class="news-date mt-2"><i class="fa fa-calendar me-1"></i>April 2026</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="news-card">
+                    <div class="news-card-header">
+                        <i class="fa fa-award fa-2x text-gold opacity-75"></i>
+                    </div>
+                    <div class="news-card-body">
+                        <div class="news-tag">Community</div>
+                        <h6>ASMAS Energy Recognised for Outstanding Community Development Contributions</h6>
+                        <p class="small text-muted mt-2">We are honoured to have been recognised by the Akure North LGA for our contributions to local economic development and job creation.</p>
+                        <div class="news-date mt-2"><i class="fa fa-calendar me-1"></i>March 2026</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="py-5" style="background:var(--navy);">
+    <div class="container text-center" data-aos="fade-up">
+        <h2 class="fw-bold text-white mb-3">Ready to Work With ASMAS Energy?</h2>
+        <p class="mb-4" style="color:#8fa8c0;">Reach out to our team today and let us power your business forward.</p>
+        <div class="d-flex justify-content-center flex-wrap gap-3">
+            <a asp-controller="Home" asp-action="Contact" class="btn btn-gold btn-lg">
+                <i class="fa fa-envelope me-2"></i>Contact Us
+            </a>
+            <a href="https://wa.me/2347079536875" target="_blank" class="btn btn-lg" style="background:#25d366;color:#fff;border:none;">
+                <i class="fab fa-whatsapp me-2"></i>WhatsApp Us
+            </a>
+        </div>
     </div>
 </section>

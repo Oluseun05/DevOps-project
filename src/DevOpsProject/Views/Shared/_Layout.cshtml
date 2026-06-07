@@ -3,23 +3,40 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ASMAS Energy — Oil & Gas exploration, petroleum supply, car wash, lubrication center and mini mart in Akure, Ondo State, Nigeria." />
+    <meta name="keywords" content="ASMAS Energy, oil and gas Nigeria, petroleum supply Akure, Ondo State energy company, car wash Akure, lubrication center" />
+    <meta name="author" content="ASMAS Energy Limited" />
+    <meta property="og:title" content="@ViewData["Title"] - ASMAS Energy" />
+    <meta property="og:description" content="ASMAS Energy — Nigeria's trusted energy partner in Akure, Ondo State." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://asmas-energy-2shusj.azurewebsites.net" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ASMAS Energy" />
+    <meta name="twitter:description" content="Powering Nigeria's energy future from Akure, Ondo State." />
     <title>@ViewData["Title"] - ASMAS Energy</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230d1b2a'/%3E%3Ctext x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter,sans-serif' font-size='26' font-weight='800' fill='%23c8962a'%3EAE%3C/text%3E%3C/svg%3E" />
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <link rel="stylesheet" href="~/css/asmas.css" />
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-asmas sticky-top">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-asmas sticky-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand" asp-controller="Home" asp-action="Index">
                 ASMAS <span>ENERGY</span>
             </a>
-            <button class="navbar-toggler border-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
+                <i class="fa fa-bars text-warning"></i>
             </button>
             <div class="collapse navbar-collapse" id="navMenu">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
                     </li>
@@ -29,8 +46,8 @@
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="Home" asp-action="Services">Services</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Home" asp-action="Contact">Contact</a>
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-gold btn-sm px-3" asp-controller="Home" asp-action="Contact">Contact Us</a>
                     </li>
                 </ul>
             </div>
@@ -41,38 +58,116 @@
         @RenderBody()
     </main>
 
+    <!-- Footer -->
     <footer class="footer-asmas">
         <div class="container">
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="brand mb-2">ASMAS ENERGY</div>
-                    <p class="small">Powering progress across Nigeria with reliable energy solutions, quality petroleum products, and exceptional service from our base in Akure, Ondo State.</p>
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="brand mb-3">ASMAS ENERGY</div>
+                    <p class="small" style="max-width:300px; line-height:1.8;">Powering progress across Nigeria with reliable energy solutions and exceptional service from Akure, Ondo State.</p>
+                    <div class="d-flex gap-2 mt-3">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <h6 class="text-white mb-3">Quick Links</h6>
-                    <ul class="list-unstyled small">
-                        <li class="mb-1"><a asp-controller="Home" asp-action="Index">Home</a></li>
-                        <li class="mb-1"><a asp-controller="Home" asp-action="About">About Us</a></li>
-                        <li class="mb-1"><a asp-controller="Home" asp-action="Services">Services</a></li>
-                        <li class="mb-1"><a asp-controller="Home" asp-action="Contact">Contact</a></li>
+                <div class="col-sm-6 col-lg-2">
+                    <h6 class="mb-3">Company</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li class="mb-2"><a asp-controller="Home" asp-action="About">About Us</a></li>
+                        <li class="mb-2"><a asp-controller="Home" asp-action="Services">Services</a></li>
+                        <li class="mb-2"><a asp-controller="Home" asp-action="Contact">Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4">
-                    <h6 class="text-white mb-3">Contact Us</h6>
-                    <ul class="list-unstyled small">
-                        <li class="mb-2"><i class="fa fa-map-marker-alt me-2 text-warning"></i>Opp. Police College, Itaogbolu, Akure North, Ondo State</li>
-                        <li class="mb-2"><i class="fa fa-phone me-2 text-warning"></i>+234 707 953 6875</li>
-                        <li class="mb-2"><i class="fa fa-envelope me-2 text-warning"></i>energyasmas&#64;gmail.com</li>
+                <div class="col-sm-6 col-lg-3">
+                    <h6 class="mb-3">Services</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a asp-controller="Home" asp-action="Services">Oil & Gas Exploration</a></li>
+                        <li class="mb-2"><a asp-controller="Home" asp-action="Services">Petroleum Supply</a></li>
+                        <li class="mb-2"><a asp-controller="Home" asp-action="Services">Car Wash</a></li>
+                        <li class="mb-2"><a asp-controller="Home" asp-action="Services">Lubrication Center</a></li>
+                        <li class="mb-2"><a asp-controller="Home" asp-action="Services">Mini Mart</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="mb-3">Get in Touch</h6>
+                    <ul class="list-unstyled small" style="line-height:2;">
+                        <li><i class="fa fa-map-marker-alt me-2 text-gold"></i>Opp. Police College, Itaogbolu, Akure North, Ondo State</li>
+                        <li><i class="fa fa-phone me-2 text-gold"></i><a href="tel:+2347079536875">+234 707 953 6875</a></li>
+                        <li><i class="fa fa-envelope me-2 text-gold"></i><a href="mailto:energyasmas@gmail.com">energyasmas&#64;gmail.com</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom text-center">
-                &copy; @DateTime.Now.Year ASMAS Energy Limited. All rights reserved. &mdash; Akure, Ondo State, Nigeria.
+            <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+                <span>&copy; @DateTime.Now.Year ASMAS Energy Limited. All rights reserved.</span>
+                <span>Akure, Ondo State, Nigeria &mdash; RC: [Registration No.]</span>
             </div>
         </div>
     </footer>
 
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/2347079536875?text=Hello%20ASMAS%20Energy%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+       class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fa fa-chevron-up"></i>
+    </a>
+
+    <!-- Cookie Consent -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+            <p class="mb-0 small text-secondary">
+                <i class="fa fa-cookie-bite me-2 text-gold"></i>
+                We use cookies to improve your experience on our website.
+                <a href="#" class="text-gold ms-1">Learn more</a>
+            </p>
+            <div class="d-flex gap-2 flex-shrink-0">
+                <button class="btn btn-sm btn-outline-secondary" onclick="declineCookies()">Decline</button>
+                <button class="btn btn-sm btn-gold" onclick="acceptCookies()">Accept All</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // AOS
+        AOS.init({ duration: 700, once: true, offset: 60 });
+
+        // Sticky navbar
+        const nav = document.getElementById('mainNav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Back to top
+        const btn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            btn.classList.toggle('visible', window.scrollY > 400);
+        });
+        btn.addEventListener('click', e => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Cookie consent
+        const banner = document.getElementById('cookieBanner');
+        if (localStorage.getItem('cookieConsent')) banner.classList.add('hidden');
+        function acceptCookies() { localStorage.setItem('cookieConsent', 'accepted'); banner.classList.add('hidden'); }
+        function declineCookies() { localStorage.setItem('cookieConsent', 'declined'); banner.classList.add('hidden'); }
+
+        // Active nav link
+        const path = window.location.pathname;
+        document.querySelectorAll('.nav-link').forEach(link => {
+            if (link.getAttribute('href') === path) link.classList.add('active');
+        });
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
